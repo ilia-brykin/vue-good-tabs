@@ -1,0 +1,34 @@
+div
+  ul.nav.nav-tabs(
+    role="tablist"
+  )
+    li.nav-item(
+      v-for="item in list"
+      :key="item.id"
+    )
+      a.nav-link(
+        @click="($event, item)"
+        :id="getTabId(item.id)"
+        :class="{ active: tabActiveId === item.id }"
+        role="tab"
+        :disabled="item.disabled"
+        :aria-controls="getContentId(item.id)"
+        :aria-selected="getAriaSelected(item.id)"
+      ) {{ item.label }}
+  .tab-content
+    .tab-pane.fade(
+      v-for="item in list"
+      :key="item.id"
+      :class="{ 'show active': tabActiveId === item.id }"
+      :id="getContentId(item.id)"
+      role="tabpanel"
+      :aria-labelledby="getTabId(item.id)"
+    )
+      slot(
+        v-if="item.slotContent"
+        :name="item.slotContent"
+      )
+      div(
+        v-else
+        v-html="item.content"
+      )

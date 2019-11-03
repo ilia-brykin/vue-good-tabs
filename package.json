@@ -1,0 +1,30 @@
+{
+  "name": "vue-good-tabs",
+  "version": "0.0.1",
+  "description": "Vuejs tabs library",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p",
+    "watch": "webpack --watch --mode=development"
+  },
+  "author": "Ilia Brykin, Tatiana Brykina",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "6.0.3",
+    "css-loader": "3.2.0",
+    "file-loader": "4.2.0",
+    "node-sass": "4.13.0",
+    "pug": "2.0.4",
+    "pug-plain-loader": "1.0.0",
+    "sass-loader": "8.0.0",
+    "vue-loader": "15.7.2",
+    "vue-template-compiler": "2.6.10",
+    "webpack": "4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "3.9.0"
+  },
+  "dependencies": {
+    "vue": "2.6.10"
+  }
+}
